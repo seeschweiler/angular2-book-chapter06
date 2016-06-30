@@ -1,4 +1,4 @@
-import {Component} from 'angular2/core';
+import {Component} from '@angular/core';
 
 @Component({
   selector: 'my-app',
@@ -17,7 +17,7 @@ import {Component} from 'angular2/core';
 export class AppComponent {
   rating1: number;
   rating2: number;
-  
+
   constructor() {
     this.rating1 = 0.7459;
     this.rating2 = 0.9645;

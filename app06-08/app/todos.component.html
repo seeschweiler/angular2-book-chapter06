@@ -1,0 +1,33 @@
+<h2>{{title}}</h2>
+
+<div class="form-group">
+  <label for="newTodoInput">New Todo Title</label>
+  <input type="text" #box class="form-control" id="newTodoInput" (keyup.enter)="addTodo(box.value); box.value=''">
+</div>
+
+
+<div class="checkbox">
+  <input id="mutate" type="checkbox" [(ngModel)]="mutate"> Mutate array
+</div>
+
+<button class="btn btn-primary" (click)="reset()">Reset</button>
+
+<br/><br/>
+
+<h4>Open Todos (piped)</h4>
+<hr/>
+<div>
+  <div *ngFor="let todo of (todos | openTodos)">
+    {{todo.title}} <span class="badge">{{todo.status}}</span>
+  </div>
+</div>
+
+<br/><br/>
+
+<h4>All Todos (no pipe)</h4>
+<hr/>
+<div>
+  <div *ngFor="let todo of todos">
+    {{todo.title}} <span class="badge" click="changeStatus(todo)">{{todo.status}}</span>
+  </div>
+</div>

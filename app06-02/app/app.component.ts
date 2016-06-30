@@ -1,4 +1,4 @@
-import {Component} from 'angular2/core';
+import {Component} from '@angular/core';
 
 @Component({
   selector: 'my-app',
@@ -15,7 +15,7 @@ import {Component} from 'angular2/core';
 })
 export class AppComponent {
   exRate_EUR_USD: number;
-  
+
   constructor() {
     this.exRate_EUR_USD = 1.0748;
   }
