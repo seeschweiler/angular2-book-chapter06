@@ -1,5 +1,4 @@
 import {Component} from '@angular/core';
-import {TemperatureConverterPipe} from './temperature-converter.pipe';
 
 @Component({
   selector: 'my-app',
@@ -14,8 +13,7 @@ import {TemperatureConverterPipe} from './temperature-converter.pipe';
         Temperatur: {{86 | temperatureConverter:'F2C':true}}
       </div>
     </div>
-  `,
-  pipes: [TemperatureConverterPipe]
+  `
 })
 export class AppComponent {
 }

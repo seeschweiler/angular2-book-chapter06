@@ -16,7 +16,7 @@ var AppComponent = (function () {
     AppComponent = __decorate([
         core_1.Component({
             selector: 'my-app',
-            template: "\n    <div class=\"panel panel-default\">\n      <div class=\"panel-heading\">\n        <h3 class=\"panel-title\">SlicePipe with Lists</h3>\n      </div>\n      <div class=\"panel-body\">\n        <li *ngFor=\"var i of collection | slice:1:4\">{{i}}</li>\n      </div>\n    </div>\n  "
+            template: "\n    <div class=\"panel panel-default\">\n      <div class=\"panel-heading\">\n        <h3 class=\"panel-title\">SlicePipe with Lists</h3>\n      </div>\n      <div class=\"panel-body\">\n        <li *ngFor=\"let i of collection | slice:1:4\">{{i}}</li>\n      </div>\n    </div>\n  "
         }), 
         __metadata('design:paramtypes', [])
     ], AppComponent);

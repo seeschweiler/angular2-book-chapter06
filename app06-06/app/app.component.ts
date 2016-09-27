@@ -8,7 +8,7 @@ import {Component} from '@angular/core';
         <h3 class="panel-title">SlicePipe with Lists</h3>
       </div>
       <div class="panel-body">
-        <li *ngFor="var i of collection | slice:1:4">{{i}}</li>
+        <li *ngFor="let i of collection | slice:1:4">{{i}}</li>
       </div>
     </div>
   `

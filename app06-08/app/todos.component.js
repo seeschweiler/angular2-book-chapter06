@@ -1,9 +1,4 @@
 "use strict";
-var __extends = (this && this.__extends) || function (d, b) {
-    for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p];
-    function __() { this.constructor = d; }
-    d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
-};
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -14,13 +9,12 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
-var open_todos_pipe_1 = require('./open-todos.pipe');
 var todos_1 = require('./todos');
 var TodosComponent = (function () {
     function TodosComponent() {
         this.todos = [];
         this.mutate = true;
-        this.title = 'Todos (pure)';
+        this.title = 'Todos (pure and impure pipe demo)';
         this.reset();
     }
     TodosComponent.prototype.addTodo = function (title) {
@@ -40,29 +34,11 @@ var TodosComponent = (function () {
     TodosComponent = __decorate([
         core_1.Component({
             selector: 'todos',
-            templateUrl: 'app/todos.component.html',
-            pipes: [open_todos_pipe_1.OpenTodosPipe]
+            templateUrl: 'app/todos.component.html'
         }), 
         __metadata('design:paramtypes', [])
     ], TodosComponent);
     return TodosComponent;
 }());
 exports.TodosComponent = TodosComponent;
-var TodosImpureComponent = (function (_super) {
-    __extends(TodosImpureComponent, _super);
-    function TodosImpureComponent() {
-        _super.apply(this, arguments);
-        this.title = 'Todos (impure)';
-    }
-    TodosImpureComponent = __decorate([
-        core_1.Component({
-            selector: 'todos-impure',
-            templateUrl: 'app/todos.component.html',
-            pipes: [open_todos_pipe_1.OpenTodosImpurePipe]
-        }), 
-        __metadata('design:paramtypes', [])
-    ], TodosImpureComponent);
-    return TodosImpureComponent;
-}(TodosComponent));
-exports.TodosImpureComponent = TodosImpureComponent;
 //# sourceMappingURL=todos.component.js.map

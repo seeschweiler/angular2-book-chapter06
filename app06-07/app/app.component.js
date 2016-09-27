@@ -9,15 +9,13 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
-var temperature_converter_pipe_1 = require('./temperature-converter.pipe');
 var AppComponent = (function () {
     function AppComponent() {
     }
     AppComponent = __decorate([
         core_1.Component({
             selector: 'my-app',
-            template: "\n    <div class=\"panel panel-default\">\n      <div class=\"panel-heading\">\n        <h3 class=\"panel-title\">TemperatureConverterPipe</h3>\n      </div>\n      <div class=\"panel-body\">\n        Temperatur: {{30 | temperatureConverter:'C2F':true}}\n        <hr />\n        Temperatur: {{86 | temperatureConverter:'F2C':true}}\n      </div>\n    </div>\n  ",
-            pipes: [temperature_converter_pipe_1.TemperatureConverterPipe]
+            template: "\n    <div class=\"panel panel-default\">\n      <div class=\"panel-heading\">\n        <h3 class=\"panel-title\">TemperatureConverterPipe</h3>\n      </div>\n      <div class=\"panel-body\">\n        Temperatur: {{30 | temperatureConverter:'C2F':true}}\n        <hr />\n        Temperatur: {{86 | temperatureConverter:'F2C':true}}\n      </div>\n    </div>\n  "
         }), 
         __metadata('design:paramtypes', [])
     ], AppComponent);

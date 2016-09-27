@@ -1,5 +1,5 @@
 export interface Todo {
-  text: string;
+  title: string;
   status: string;
 }
 export const TODOS =  [

@@ -2,7 +2,9 @@ import { Pipe, PipeTransform } from '@angular/core';
 
 import { Todo } from './todos';
 
-@Pipe({ name: 'openTodos' })
+@Pipe({
+   name: 'openTodos'
+})
 export class OpenTodosPipe implements PipeTransform {
   transform(allTodos: Todo[]) {
     return allTodos.filter(todo => todo.status == 'open');
@@ -10,7 +12,7 @@ export class OpenTodosPipe implements PipeTransform {
 }
 
 @Pipe({
-  name: 'openTodos',
+  name: 'openTodosImpure',
   pure: false
 })
 export class OpenTodosImpurePipe extends OpenTodosPipe {}

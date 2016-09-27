@@ -1,18 +1,14 @@
 import { Component } from '@angular/core';
-
-import { OpenTodosPipe,
-        OpenTodosImpurePipe } from './open-todos.pipe';
 import { TODOS, Todo } from './todos';
 
 @Component({
   selector: 'todos',
-  templateUrl: 'app/todos.component.html',
-  pipes: [OpenTodosPipe]
+  templateUrl: 'app/todos.component.html'
 })
 export class TodosComponent {
   todos: Todo[] = [];
   mutate = true;
-  title = 'Todos (pure)';
+  title = 'Todos (pure and impure pipe demo)';
 
   constructor() { this.reset(); }
 
@@ -28,13 +24,4 @@ export class TodosComponent {
   }
 
   reset() { this.todos = TODOS.slice(); }
-}
-
-@Component({
-  selector: 'todos-impure',
-  templateUrl: 'app/todos.component.html',
-  pipes: [OpenTodosImpurePipe]
-})
-export class TodosImpureComponent extends TodosComponent {
-  title = 'Todos (impure)';
 }

@@ -21,7 +21,9 @@ var OpenTodosPipe = (function () {
         return allTodos.filter(function (todo) { return todo.status == 'open'; });
     };
     OpenTodosPipe = __decorate([
-        core_1.Pipe({ name: 'openTodos' }), 
+        core_1.Pipe({
+            name: 'openTodos'
+        }), 
         __metadata('design:paramtypes', [])
     ], OpenTodosPipe);
     return OpenTodosPipe;
@@ -34,7 +36,7 @@ var OpenTodosImpurePipe = (function (_super) {
     }
     OpenTodosImpurePipe = __decorate([
         core_1.Pipe({
-            name: 'openTodos',
+            name: 'openTodosImpure',
             pure: false
         }), 
         __metadata('design:paramtypes', [])
